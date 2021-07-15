@@ -61,4 +61,4 @@ ln -s target linkname
 
 We need to create a symbolic link to /home/flag04/token in the /tmp directory (where we have write perms) and then pass that link as the input to ./flag04.
 
-![](/home/ahaquer/Repos/writeups/nebula/assets/level04/flag.png)
+![](assets/level04/flag.png)
