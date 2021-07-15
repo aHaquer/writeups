@@ -50,7 +50,7 @@ A [Flask](https://flask.palletsprojects.com/en/2.0.x/) website is created, and i
 
 Python's urandom is actually insecure in some cases:
 
-![](/home/ahaquer/Repos/writeups/ctfmisc/assets/secure-session/urandom.png)
+![](assets/secure-session/urandom.png)
 
 On Linux, os.urandom() works by tapping into [/dev/urandom](https://linux.die.net/man/4/urandom), which gathers entropy from device drivers. When operating normally, this provides a rather secure source of randomness for applications, but when its entropy pool is low (such as at system boot), the data generated from /dev/urandom can be predictable. This article from [Linux Weekly News](https://lwn.net/Articles/693189/) goes into much more depth than I will here.
 
@@ -58,10 +58,10 @@ This is interesting, but it doesn't do much to aid in our exploitation. It seems
 
 The session cookie we're targeting doesn't appear to be encrypted, so I started to wonder how Flask's secret key configuration variables actually protected the stored data.
 
-![](/home/ahaquer/Repos/writeups/ctfmisc/assets/secure-session/session-cookie.png)
+![](assets/secure-session/session-cookie.png)
 
 That led me to [this article](https://blog.miguelgrinberg.com/post/how-secure-is-the-flask-user-session) which helped me solve the challenge. The session cookie isn't at all encrypted, that's not what Flask's SECRET_KEY [actually does](https://stackoverflow.com/a/48596852). This session cookie is just [Base64](https://en.wikipedia.org/wiki/Base64) encoded, and the os.urandom snippet was a red herring! When we Base64 decode the session cookie, we're eventually led to our flag:
 
-![](/home/ahaquer/Repos/writeups/ctfmisc/assets/secure-session/flag.png)
+![](assets/secure-session/flag.png)
 
 I got tunnel vision on os.urandom() before seeing the obvious.
