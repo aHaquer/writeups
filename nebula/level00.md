@@ -16,4 +16,4 @@ find / -type f -perm /4000 2>/dev/null
 
 Once you find an SUID file your next step is to figure out how to exploit it. This isn't part of the challenge here, but in the real world [GTFOBins](https://gtfobins.github.io/) is a helpful resource for this.
 
-![](/home/ahaquer/Repos/writeups/nebula/assets/level00.png)
+![flag](/home/ahaquer/Repos/writeups/nebula/assets/level00.png)
