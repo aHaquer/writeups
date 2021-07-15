@@ -58,7 +58,7 @@ This is interesting, but it doesn't do much to aid in our exploitation. It seems
 
 The session cookie we're targeting doesn't appear to be encrypted, so I started to wonder how Flask's secret key configuration variables actually protected the stored data.
 
-![session cookie](/home/ahaquer/Repos/writeups/ctfmisc/assets/secure-session/session-cookie.png)
+![](/home/ahaquer/Repos/writeups/ctfmisc/assets/secure-session/session-cookie.png)
 
 That led me to [this article](https://blog.miguelgrinberg.com/post/how-secure-is-the-flask-user-session) which helped me solve the challenge. The session cookie isn't at all encrypted, that's not what Flask's SECRET_KEY [actually does](https://stackoverflow.com/a/48596852). This session cookie is just [Base64](https://en.wikipedia.org/wiki/Base64) encoded, and the os.urandom snippet was a red herring! When we Base64 decode the session cookie, we're eventually led to our flag:
 

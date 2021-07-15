@@ -49,4 +49,4 @@ int main() {
 
 We can then exploit the system and get out flag!
 
-![flag](/home/ahaquer/Repos/writeups/nebula/assets/level01-flag.png)
+![](/home/ahaquer/Repos/writeups/nebula/assets/level01-flag.png)
