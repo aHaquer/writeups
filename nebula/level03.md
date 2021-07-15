@@ -35,4 +35,4 @@ and I used this listener on my Kali machine:
 nc -lvnp 4444
 ```
 
-![](/home/ahaquer/Repos/writeups/nebula/assets/level03/flag.png)
+![](assets/level03/flag.png)
