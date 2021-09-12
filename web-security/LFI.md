@@ -47,7 +47,7 @@ Success! Here we can find the user flag:
 
 ![](assets/LFI/user.png)
 
-Since "sudo" is one of the tags on this box, I'll check the ```sudo -l```:
+Since "sudo" is one of the tags on this box, I'll check what commands our user is allowed to run on sudo without a password:
 
 ![](assets/LFI/sudo-l.png)
 
