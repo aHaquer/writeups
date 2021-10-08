@@ -1,3 +1,5 @@
-# README
+# Writeups
 
-This repo will showcase my writeups, "blog posts," and general silliness. Topics will range from CTF writeups to penetration testing and programming. For the time being, this will be a markdown repo, as I am too lazy to pick out a static site generator and theme, and there isn't much to see here yet.
+In an effort to document my learning, distribute understanding, and ~~become employed~~ grow, this repo will showcase my challenge writeups. The microcorruption, sausage-links, and nebula writeups are of note.
+
+[![](./assets/meta/logo_cropped_lite.png)](https://twitter.com/haquer_a)
