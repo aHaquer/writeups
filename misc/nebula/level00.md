@@ -1,4 +1,4 @@
-# [Level 00](https://exploit.education/nebula/level-00/) - Nebula
+# Level 00 - Nebula
 
 ```
 This level requires you to find a Set User ID program that will run as the “flag00” account. You could also find this by carefully looking in top level directories in / for suspicious looking directories.

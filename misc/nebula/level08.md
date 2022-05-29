@@ -1,4 +1,4 @@
-# [Level 08](https://exploit.education/nebula/level-08/) - Nebula
+# Level 08- Nebula
 
 ```
 World readable files strike again. Check what that user was up to, and use it to log into flag08 account.
